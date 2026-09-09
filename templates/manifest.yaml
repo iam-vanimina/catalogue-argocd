@@ -36,6 +36,18 @@ spec:
         envFrom:
         - configMapRef:
             name: catalogue
+            
+
+
+         readinessProbe:
+           httpGet:
+             path: /ready
+             port: 8080
+
+         livenessProbe:
+           httpGet:
+              path: /health
+              port: 8080   
 ---
 apiVersion: v1
 kind: Service
