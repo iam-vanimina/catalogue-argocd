@@ -39,12 +39,12 @@ spec:
             
 
 
-         readinessProbe:
+        readinessProbe:
            httpGet:
              path: /ready
              port: 8080
 
-         livenessProbe:
+        livenessProbe:
            httpGet:
               path: /health
               port: 8080   
